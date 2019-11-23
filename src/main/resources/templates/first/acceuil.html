@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+	<h2 align="center">La vue Accueil</h2>
+	<span th:text="${msg}"></span>
+	<ul>
+		<li th:text="${ec[0]}">lkr	</li>
+		<li th:text="${ec[1]}">lkr	</li>
+		<li th:text="${ec[2]}">lkr	</li>
+		<li th:text="${forma}">zmlek</li>
+		<ul th:each="name : ${names}">
+			<li th:text="${name}">...</li>
+		</ul>
+		<ul th:each="animal : ${animals}">
+			<li>
+				<p><span th:text="${animal.getNom()}"></span><span th:text="${animal.getAge()}"></span></p>
+			</li>
+		</ul>
+	</ul>
+</body>
+</html>
